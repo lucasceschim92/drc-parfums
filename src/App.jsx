@@ -8,11 +8,24 @@ import {
   ChevronRight, 
   Trash2,
   Crown,
-  Ban,
-  Sparkles
+  Ban
 } from 'lucide-react';
 
 const PERFUMES = [
+  {
+    id: 'creed-wild-vetiver',
+    marca: 'CREED',
+    linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
+    nome: 'Wild Vetiver',
+    precoPorMl: 38.50,
+    mlDisponiveis: 46,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático Amadeirado',
+    saida: 'Bergamota, Pimenta Rosa e Pimenta Timur',
+    coracao: 'Rosa, Groselha Preta (Cassis) e Gerânio',
+    fundo: 'Vetiver, Madeira de Âmbar e Cedro',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.125485.jpg'
+  },
   {
     id: 'boadicea-blue-sapphire',
     marca: 'BOADICEA THE VICTORIOUS',
@@ -264,7 +277,7 @@ export default function App() {
                 <div className="mt-1.5 pt-1.5 border-t border-dashed border-neutral-200 flex items-baseline justify-between">
                   <div>
                     <span className="text-xs sm:text-sm font-extrabold text-neutral-900">
-                      R$ {perfume.precoPorMl.toFixed(0)}
+                      R$ {perfume.precoPorMl.toFixed(2)}
                     </span>
                     <span className="text-[9px] text-neutral-400 ml-0.5">/ml</span>
                   </div>
@@ -291,7 +304,7 @@ export default function App() {
       {selectedPerfume && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4">
           <div className="bg-white w-full max-w-md rounded-t-3xl sm:rounded-2xl p-4 sm:p-5 max-h-[90vh] overflow-y-auto shadow-2xl animate-in slide-in-from-bottom duration-200">
-            {/* Barra de puxar estilo iPhone no mobile */}
+            {/* Barra puxador no mobile */}
             <div className="w-10 h-1 bg-neutral-300 rounded-full mx-auto mb-3 sm:hidden" />
 
             <div className="flex justify-between items-start">
@@ -319,7 +332,7 @@ export default function App() {
               </button>
             </div>
 
-            {/* Pirâmide Olfativa Compacta */}
+            {/* Pirâmide Olfativa Fragrantica */}
             <div className="my-3 p-3 bg-neutral-50 border border-neutral-200/80 rounded-xl">
               <div className="flex justify-between items-center mb-1.5 pb-1 border-b border-neutral-200 text-[10px]">
                 <span className="font-mono uppercase text-neutral-400">Pirâmide Olfativa</span>
@@ -378,7 +391,7 @@ export default function App() {
               </div>
             )}
 
-            {/* Seletor de Volume para Decant */}
+            {/* Seletor de Volume do Decant */}
             {!querAPC && (
               <div className="space-y-2.5">
                 <div className="flex justify-between items-baseline">
@@ -454,7 +467,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Drawer do Carrinho / Finalização Otimizado */}
+      {/* Drawer do Carrinho / Finalização */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
           <div className="bg-white w-full max-w-sm h-full flex flex-col justify-between p-4 sm:p-5 shadow-2xl">
