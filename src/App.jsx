@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   ShoppingBag, 
   Plus, 
@@ -25,20 +25,6 @@ const PERFUMES = [
     coracao: 'Rosa, Jasmim Indiano e Magnólia',
     fundo: 'Agarwood (Oud), Patchouli e Âmbar',
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.18518.jpg'
-  },
-  {
-    id: 'byredo-bal-dafrique',
-    marca: 'BYREDO',
-    linha: 'NICHO · COMPARTILHÁVEL',
-    nome: "Bal d'Afrique",
-    precoPorMl: 26.00,
-    mlDisponiveis: 94,
-    apcDisponivel: true,
-    familia: 'Âmbar Amadeirado',
-    saida: 'Limão de Amalfi, Tagetes, Groselha Preta e Bergamota',
-    coracao: 'Violeta, Cyclamen e Jasmim',
-    fundo: 'Vetiver, Almíscar, Âmbar e Cedro da Virgínia',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.6458.jpg'
   },
   {
     id: 'creed-wild-vetiver',
@@ -83,6 +69,34 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.69069.jpg'
   },
   {
+    id: 'sospiro-vibrato',
+    marca: 'SOSPIRO PERFUMES',
+    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Vibrato',
+    precoPorMl: 28.00,
+    mlDisponiveis: 39,
+    apcDisponivel: true,
+    familia: 'Cítrico Floral Amadeirado',
+    saida: 'Bergamota, Toranja, Mandarina e Jasmim',
+    coracao: 'Gengibre, Notas Herbais e Magnólia',
+    fundo: 'Cedro, Almíscar, Patchouli, Raiz de Orris e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77196.jpg'
+  },
+  {
+    id: 'xerjoff-naxos',
+    marca: 'XERJOFF',
+    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
+    nome: 'XJ 1861 Naxos',
+    precoPorMl: 16.00,
+    mlDisponiveis: 40,
+    apcDisponivel: true,
+    familia: 'Aromático Especiado',
+    saida: 'Lavanda, Bergamota e Limão Siciliano',
+    coracao: 'Mel, Canela, Cashmeran e Jasmim Sambac',
+    fundo: 'Folha de Tabaco, Fava Tonka e Baunilha',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
+  },
+  {
     id: 'nishane-hacivat',
     marca: 'NISHANE',
     linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
@@ -125,34 +139,6 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.103006.jpg'
   },
   {
-    id: 'sospiro-vibrato',
-    marca: 'SOSPIRO PERFUMES',
-    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Vibrato',
-    precoPorMl: 28.00,
-    mlDisponiveis: 39,
-    apcDisponivel: true,
-    familia: 'Cítrico Floral Amadeirado',
-    saida: 'Bergamota, Toranja, Mandarina e Jasmim',
-    coracao: 'Gengibre, Notas Herbais e Magnólia',
-    fundo: 'Cedro, Almíscar, Patchouli, Raiz de Orris e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77196.jpg'
-  },
-  {
-    id: 'xerjoff-naxos',
-    marca: 'XERJOFF',
-    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
-    nome: 'XJ 1861 Naxos',
-    precoPorMl: 16.00,
-    mlDisponiveis: 40,
-    apcDisponivel: true,
-    familia: 'Aromático Especiado',
-    saida: 'Lavanda, Bergamota e Limão Siciliano',
-    coracao: 'Mel, Canela, Cashmeran e Jasmim Sambac',
-    fundo: 'Folha de Tabaco, Fava Tonka e Baunilha',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
-  },
-  {
     id: 'xerjoff-renaissance',
     marca: 'XERJOFF',
     linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
@@ -182,6 +168,14 @@ export default function App() {
   const [cep, setCep] = useState('');
   const [freteCalculado, setFreteCalculado] = useState(null);
   const [isCalculandoFrete, setIsCalculandoFrete] = useState(false);
+
+  // Ordena automaticamente os perfumes colocando os com APC disponível primeiro
+  const perfumesOrdenados = useMemo(() => {
+    return [...PERFUMES].sort((a, b) => {
+      if (a.apcDisponivel === b.apcDisponivel) return 0;
+      return a.apcDisponivel ? -1 : 1;
+    });
+  }, []);
 
   const handleOpenDossie = (perfume) => {
     setSelectedPerfume(perfume);
@@ -322,12 +316,12 @@ export default function App() {
             <h2 className="text-sm sm:text-base font-serif font-bold text-neutral-900">Curadoria Exclusiva de Decants & APC</h2>
           </div>
           <span className="text-[10px] font-mono text-neutral-500 bg-neutral-200/60 px-2 py-0.5 rounded-full">
-            {PERFUMES.length} perfumes
+            {perfumesOrdenados.length} perfumes
           </span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4">
-          {PERFUMES.map((perfume) => (
+          {perfumesOrdenados.map((perfume) => (
             <div 
               key={perfume.id} 
               onClick={() => handleOpenDossie(perfume)}
@@ -348,8 +342,8 @@ export default function App() {
                 </span>
 
                 {perfume.apcDisponivel && (
-                  <span className="absolute bottom-1.5 right-1.5 text-[8px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-300 px-1 py-0.5 rounded">
-                    APC Disp.
+                  <span className="absolute bottom-1.5 right-1.5 text-[8px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-300 px-1 py-0.5 rounded flex items-center gap-0.5 shadow-xs">
+                    <Crown size={9} className="text-amber-700" /> APC Disp.
                   </span>
                 )}
               </div>
