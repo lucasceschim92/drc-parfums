@@ -13,27 +13,13 @@ import {
 
 const PERFUMES = [
   {
-    id: 'creed-wild-vetiver',
-    marca: 'CREED',
-    linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
-    nome: 'Wild Vetiver',
-    precoPorMl: 38.50,
-    mlDisponiveis: 46,
-    apcDisponivel: false,
-    familia: 'Cítrico Aromático Amadeirado',
-    saida: 'Bergamota, Pimenta Rosa e Pimenta Timur',
-    coracao: 'Rosa, Groselha Preta (Cassis) e Gerânio',
-    fundo: 'Vetiver, Madeira de Âmbar e Cedro',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.125485.jpg'
-  },
-  {
     id: 'boadicea-blue-sapphire',
     marca: 'BOADICEA THE VICTORIOUS',
     linha: 'NICHO · COMPARTILHÁVEL',
     nome: 'Blue Sapphire',
     precoPorMl: 34.00,
-    mlDisponiveis: 11,
-    apcDisponivel: false,
+    mlDisponiveis: 53,
+    apcDisponivel: true,
     familia: 'Oriental Amadeirado',
     saida: 'Limão, Camomila, Sálvia, Açafrão e Tagetes',
     coracao: 'Rosa, Jasmim Indiano e Magnólia',
@@ -41,32 +27,32 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.18518.jpg'
   },
   {
-    id: 'crivelli-hibiscus-mahajad',
-    marca: 'MAISON CRIVELLI',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Hibiscus Mahajád',
-    precoPorMl: 38.00,
-    mlDisponiveis: 40,
-    apcDisponivel: false,
-    familia: 'Floral Oriental Frutado',
-    saida: 'Hibisco, Cassis e Hortelã Picante',
-    coracao: 'Rosa Damascena e Canela',
-    fundo: 'Baunilha, Couro, Ambreta e Cedro',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69069.jpg'
+    id: 'byredo-bal-dafrique',
+    marca: 'BYREDO',
+    linha: 'NICHO · COMPARTILHÁVEL',
+    nome: "Bal d'Afrique",
+    precoPorMl: 26.00,
+    mlDisponiveis: 94,
+    apcDisponivel: true,
+    familia: 'Âmbar Amadeirado',
+    saida: 'Limão de Amalfi, Tagetes, Groselha Preta e Bergamota',
+    coracao: 'Violeta, Cyclamen e Jasmim',
+    fundo: 'Vetiver, Almíscar, Âmbar e Cedro da Virgínia',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.6458.jpg'
   },
   {
-    id: 'xerjoff-naxos',
-    marca: 'XERJOFF',
-    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
-    nome: 'XJ 1861 Naxos',
-    precoPorMl: 16.00,
-    mlDisponiveis: 30,
-    apcDisponivel: false,
-    familia: 'Aromático Especiado',
-    saida: 'Lavanda, Bergamota e Limão Siciliano',
-    coracao: 'Mel, Canela, Cashmeran e Jasmim Sambac',
-    fundo: 'Folha de Tabaco, Fava Tonka e Baunilha',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
+    id: 'creed-wild-vetiver',
+    marca: 'CREED',
+    linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
+    nome: 'Wild Vetiver',
+    precoPorMl: 38.50,
+    mlDisponiveis: 76,
+    apcDisponivel: true,
+    familia: 'Cítrico Aromático Amadeirado',
+    saida: 'Bergamota, Pimenta Rosa e Pimenta Timur',
+    coracao: 'Rosa, Groselha Preta (Cassis) e Gerânio',
+    fundo: 'Vetiver, Madeira de Âmbar e Cedro',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.125485.jpg'
   },
   {
     id: 'lv-ombre-nomade',
@@ -74,13 +60,111 @@ const PERFUMES = [
     linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
     nome: 'Ombre Nomade',
     precoPorMl: 35.00,
-    mlDisponiveis: 47,
-    apcDisponivel: false,
-    familia: 'Oriental Amadeirado',
+    mlDisponiveis: 74,
+    apcDisponivel: true,
+    familia: 'Âmbar Amadeirado',
     saida: 'Framboesa, Açafrão e Rosa Damascena',
     coracao: 'Agarwood (Oud) e Olíbano',
     fundo: 'Bétula, Benjoim, Madeira de Âmbar e Gerânio',
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.49755.jpg'
+  },
+  {
+    id: 'crivelli-hibiscus-mahajad',
+    marca: 'MAISON CRIVELLI',
+    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Hibiscus Mahajád',
+    precoPorMl: 38.00,
+    mlDisponiveis: 85,
+    apcDisponivel: true,
+    familia: 'Floral Oriental Frutado',
+    saida: 'Hibisco, Cassis e Hortelã Picante',
+    coracao: 'Rosa Damascena e Canela',
+    fundo: 'Baunilha, Couro, Ambreta e Cedro',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69069.jpg'
+  },
+  {
+    id: 'nishane-hacivat',
+    marca: 'NISHANE',
+    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Hacivat',
+    precoPorMl: 24.00,
+    mlDisponiveis: 15,
+    apcDisponivel: false,
+    familia: 'Chipre Frutado',
+    saida: 'Abacaxi, Bergamota e Toranja',
+    coracao: 'Cedro, Patchouli e Jasmim',
+    fundo: 'Musgo de Carvalho e Notas Amadeiradas',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.44174.jpg'
+  },
+  {
+    id: 'nishane-hundred-silent-ways',
+    marca: 'NISHANE',
+    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Hundred Silent Ways',
+    precoPorMl: 24.00,
+    mlDisponiveis: 13,
+    apcDisponivel: false,
+    familia: 'Floral Compartilhável',
+    saida: 'Tuberosa, Pêssego e Mandarina',
+    coracao: 'Gardênia, Raiz de Orris e Jasmim',
+    fundo: 'Baunilha, Sândalo e Vetiver',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.37602.jpg'
+  },
+  {
+    id: 'nishane-meltemia',
+    marca: 'NISHANE',
+    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Meltemia',
+    precoPorMl: 25.00,
+    mlDisponiveis: 56,
+    apcDisponivel: false,
+    familia: 'Aromático Aquático Amadeirado',
+    saida: 'Notas Marinhas, Bergamota e Especiarias Frescas',
+    coracao: 'Sal Marinho, Sálvia e Resinas',
+    fundo: 'Cedro, Âmbar e Almíscar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.103006.jpg'
+  },
+  {
+    id: 'sospiro-vibrato',
+    marca: 'SOSPIRO PERFUMES',
+    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Vibrato',
+    precoPorMl: 28.00,
+    mlDisponiveis: 39,
+    apcDisponivel: true,
+    familia: 'Cítrico Floral Amadeirado',
+    saida: 'Bergamota, Toranja, Mandarina e Jasmim',
+    coracao: 'Gengibre, Notas Herbais e Magnólia',
+    fundo: 'Cedro, Almíscar, Patchouli, Raiz de Orris e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77196.jpg'
+  },
+  {
+    id: 'xerjoff-naxos',
+    marca: 'XERJOFF',
+    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
+    nome: 'XJ 1861 Naxos',
+    precoPorMl: 16.00,
+    mlDisponiveis: 40,
+    apcDisponivel: true,
+    familia: 'Aromático Especiado',
+    saida: 'Lavanda, Bergamota e Limão Siciliano',
+    coracao: 'Mel, Canela, Cashmeran e Jasmim Sambac',
+    fundo: 'Folha de Tabaco, Fava Tonka e Baunilha',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
+  },
+  {
+    id: 'xerjoff-renaissance',
+    marca: 'XERJOFF',
+    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
+    nome: 'XJ 1861 Renaissance',
+    precoPorMl: 16.00,
+    mlDisponiveis: 10,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático',
+    saida: 'Limão Amalfi, Tangerina, Bergamota e Petitgrain',
+    coracao: 'Hortelã, Lírio-do-Vale e Rosa Búlgara',
+    fundo: 'Almíscar, Cedro, Âmbar e Patchouli',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.12128.jpg'
   }
 ];
 
@@ -183,7 +267,7 @@ export default function App() {
       if (item.isAPC) {
         texto += `🥂 *APC — APRESENTAÇÃO COMPLETA*\n`;
         texto += `• *${item.marca} ${item.nome}* — ${item.ml} ml restantes\n`;
-        texto += `  (Frasco original + Embalagem/Caixa oficial: + R$ ${TAXA_FRASCO_APC.toFixed(2)})\n`;
+        texto += `  (Frasco original + Caixa oficial: + R$ ${TAXA_FRASCO_APC.toFixed(2)})\n`;
         texto += `  R$ ${item.subtotal.toFixed(2)}\n\n`;
       } else {
         texto += `🧴 *DECANT*\n`;
@@ -209,7 +293,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F8F8F7] text-[#191919] font-sans antialiased pb-20 sm:pb-8">
-      {/* Header Sticky Otimizado */}
+      {/* Header Sticky */}
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#ECECE6] px-3.5 sm:px-6 py-2.5 flex items-center justify-between shadow-xs">
         <div className="leading-tight">
           <span className="text-[9px] tracking-[0.25em] font-semibold text-neutral-400 uppercase block">Alta Perfumaria</span>
@@ -235,14 +319,13 @@ export default function App() {
         <div className="mb-3.5 flex items-center justify-between px-1">
           <div>
             <span className="text-[10px] tracking-widest uppercase text-neutral-500 font-semibold block">Frascos Disponíveis</span>
-            <h2 className="text-sm sm:text-base font-serif font-bold text-neutral-900">Curadoria Exclusiva de Decants</h2>
+            <h2 className="text-sm sm:text-base font-serif font-bold text-neutral-900">Curadoria Exclusiva de Decants & APC</h2>
           </div>
           <span className="text-[10px] font-mono text-neutral-500 bg-neutral-200/60 px-2 py-0.5 rounded-full">
             {PERFUMES.length} perfumes
           </span>
         </div>
 
-        {/* 2 colunas no celular: grid-cols-2 */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4">
           {PERFUMES.map((perfume) => (
             <div 
@@ -250,7 +333,7 @@ export default function App() {
               onClick={() => handleOpenDossie(perfume)}
               className="bg-white border border-[#E7E7E0] rounded-xl p-2.5 sm:p-3.5 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all active:scale-[0.99] cursor-pointer"
             >
-              {/* Imagem do Produto com Tag de ML */}
+              {/* Imagem com Tag de APC e ML */}
               <div className="relative aspect-square mb-2 bg-[#FAFAF9] rounded-lg overflow-hidden flex items-center justify-center p-2 border border-neutral-100">
                 <img 
                   src={perfume.imagem} 
@@ -263,9 +346,15 @@ export default function App() {
                 }`}>
                   {perfume.mlDisponiveis} ml disp.
                 </span>
+
+                {perfume.apcDisponivel && (
+                  <span className="absolute bottom-1.5 right-1.5 text-[8px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-300 px-1 py-0.5 rounded">
+                    APC Disp.
+                  </span>
+                )}
               </div>
 
-              {/* Informações Resumidas */}
+              {/* Informações */}
               <div>
                 <span className="text-[8.5px] sm:text-[9.5px] tracking-wider font-semibold text-neutral-400 uppercase truncate block">
                   {perfume.marca}
@@ -282,12 +371,12 @@ export default function App() {
                     <span className="text-[9px] text-neutral-400 ml-0.5">/ml</span>
                   </div>
                   <span className="text-[9px] font-sans text-neutral-500 uppercase tracking-tighter">
-                    Decant
+                    {perfume.apcDisponivel ? 'Decant/APC' : 'Decant'}
                   </span>
                 </div>
               </div>
 
-              {/* Botão de Ação Rápida */}
+              {/* Botão */}
               <button
                 type="button"
                 className="mt-2.5 w-full py-1.5 sm:py-2 px-2 bg-neutral-100 hover:bg-neutral-900 hover:text-white text-neutral-800 rounded-lg text-[11px] font-semibold tracking-wide transition-colors flex items-center justify-center gap-1"
@@ -300,11 +389,10 @@ export default function App() {
         </div>
       </main>
 
-      {/* Modal / Bottom-Sheet Mobile First */}
+      {/* Modal / Bottom-Sheet Mobile */}
       {selectedPerfume && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4">
           <div className="bg-white w-full max-w-md rounded-t-3xl sm:rounded-2xl p-4 sm:p-5 max-h-[90vh] overflow-y-auto shadow-2xl animate-in slide-in-from-bottom duration-200">
-            {/* Barra puxador no mobile */}
             <div className="w-10 h-1 bg-neutral-300 rounded-full mx-auto mb-3 sm:hidden" />
 
             <div className="flex justify-between items-start">
@@ -332,7 +420,7 @@ export default function App() {
               </button>
             </div>
 
-            {/* Pirâmide Olfativa Fragrantica */}
+            {/* Pirâmide Olfativa */}
             <div className="my-3 p-3 bg-neutral-50 border border-neutral-200/80 rounded-xl">
               <div className="flex justify-between items-center mb-1.5 pb-1 border-b border-neutral-200 text-[10px]">
                 <span className="font-mono uppercase text-neutral-400">Pirâmide Olfativa</span>
@@ -354,18 +442,8 @@ export default function App() {
               </div>
             </div>
 
-            {/* Aviso de APC Indisponível */}
-            {!selectedPerfume.apcDisponivel ? (
-              <div className="p-2 rounded-xl border border-neutral-200 bg-neutral-50 mb-3 flex items-center justify-between text-neutral-400 text-[11px]">
-                <div className="flex items-center gap-1.5">
-                  <Ban size={13} className="text-neutral-400" />
-                  <span>APC (Frasco Original) Indisponível</span>
-                </div>
-                <span className="text-[9px] font-mono uppercase bg-neutral-200 text-neutral-600 px-1.5 py-0.5 rounded">
-                  Retido
-                </span>
-              </div>
-            ) : (
+            {/* Controle de APC */}
+            {selectedPerfume.apcDisponivel ? (
               <div 
                 onClick={handleToggleAPC}
                 className={`p-2.5 rounded-xl border transition-all cursor-pointer mb-3 flex items-center justify-between ${
@@ -389,9 +467,19 @@ export default function App() {
                   {selectedPerfume.mlDisponiveis} ml
                 </span>
               </div>
+            ) : (
+              <div className="p-2 rounded-xl border border-neutral-200 bg-neutral-50 mb-3 flex items-center justify-between text-neutral-400 text-[11px]">
+                <div className="flex items-center gap-1.5">
+                  <Ban size={13} className="text-neutral-400" />
+                  <span>APC (Frasco Original) Indisponível</span>
+                </div>
+                <span className="text-[9px] font-mono uppercase bg-neutral-200 text-neutral-600 px-1.5 py-0.5 rounded">
+                  Retido
+                </span>
+              </div>
             )}
 
-            {/* Seletor de Volume do Decant */}
+            {/* Seletor de Decant */}
             {!querAPC && (
               <div className="space-y-2.5">
                 <div className="flex justify-between items-baseline">
@@ -447,7 +535,7 @@ export default function App() {
               </div>
             )}
 
-            {/* Rodapé do Modal */}
+            {/* Rodapé */}
             <div className="mt-4 pt-3 border-t border-neutral-200 flex items-center justify-between gap-3">
               <div>
                 <span className="text-[9px] font-mono text-neutral-400 uppercase block">Total</span>
@@ -459,7 +547,7 @@ export default function App() {
                 onClick={handleAddToCart}
                 className="flex-1 bg-neutral-900 text-white py-2.5 px-3 rounded-xl text-xs font-semibold uppercase tracking-wide hover:bg-black transition-colors flex items-center justify-center gap-1.5"
               >
-                <span>Adicionar ao Pedido</span>
+                <span>{querAPC ? 'Disputar APC' : 'Adicionar Decant'}</span>
                 <Plus size={14} />
               </button>
             </div>
@@ -467,7 +555,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Drawer do Carrinho / Finalização */}
+      {/* Carrinho Lateral */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex justify-end">
           <div className="bg-white w-full max-w-sm h-full flex flex-col justify-between p-4 sm:p-5 shadow-2xl">
@@ -497,7 +585,7 @@ export default function App() {
                           <span className="text-[8px] font-bold text-neutral-400 uppercase block leading-tight">{item.marca}</span>
                           <h4 className="text-[11px] font-serif font-semibold text-neutral-900 leading-tight">{item.nome}</h4>
                           <span className="text-[10px] text-neutral-500 font-mono">
-                            {item.ml} ml {item.isAPC ? '· APC' : '· Decant'}
+                            {item.ml} ml {item.isAPC ? '· APC (+R$40)' : '· Decant (+R$9)'}
                           </span>
                         </div>
                       </div>
