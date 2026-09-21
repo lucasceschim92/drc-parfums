@@ -8,7 +8,8 @@ import {
   ChevronRight, 
   Trash2,
   Crown,
-  Ban
+  Ban,
+  CreditCard
 } from 'lucide-react';
 
 const PERFUMES = [
@@ -170,7 +171,7 @@ const PERFUMES = [
 
 const TAXA_FRASCO_DECANT = 9.00;
 const TAXA_FRASCO_APC = 40.00;
-const TELEFONE_WHATSAPP = "5528999317240";
+const TELEFONE_WHATSAPP = "5528999005475";
 
 export default function App() {
   const [selectedPerfume, setSelectedPerfume] = useState(null);
@@ -178,10 +179,6 @@ export default function App() {
   const [querAPC, setQuerAPC] = useState(false);
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  
-  const [cep, setCep] = useState('');
-  const [freteCalculado, setFreteCalculado] = useState(null);
-  const [isCalculandoFrete, setIsCalculandoFrete] = useState(false);
 
   // Mantém a regra: APCs disponíveis sempre aparecem primeiro
   const perfumesOrdenados = useMemo(() => {
@@ -249,23 +246,7 @@ export default function App() {
     setCart(prev => prev.filter(item => item.id !== id));
   };
 
-  const handleCalcularFrete = () => {
-    if (cep.length < 8) return;
-    setIsCalculandoFrete(true);
-    setTimeout(() => {
-      setFreteCalculado({
-        transportadora: 'LOGGI',
-        prazo: '5 a 7 dias úteis',
-        valor: 32.50
-      });
-      setIsCalculandoFrete(false);
-    }, 600);
-  };
-
-  const subtotalItens = cart.reduce((acc, item) => acc + item.subtotal, 0);
-  const valorFrete = freteCalculado ? freteCalculado.valor : 0;
-  const totalCartao = subtotalItens + valorFrete;
-  const totalPix = totalCartao * 0.90;
+  const totalPix = cart.reduce((acc, item) => acc + item.subtotal, 0);
 
   const handleFinalizarWhatsApp = () => {
     let texto = `Olá! Gostaria de finalizar meu pedido na *DRC PARFUMS*.\n\n`;
@@ -285,14 +266,8 @@ export default function App() {
       }
     });
 
-    if (freteCalculado && cep) {
-      texto += `📦 *Entrega:* CEP ${cep}\n`;
-      texto += `${freteCalculado.transportadora} · ${freteCalculado.prazo} · R$ ${freteCalculado.valor.toFixed(2)}\n`;
-      texto += `*(Ou acumular pedido por até 60 dias)*\n\n`;
-    }
-
-    texto += `💳 *Total no cartão:* R$ ${totalCartao.toFixed(2)}\nAté 5x sem juros\n\n`;
-    texto += `💰 *Total no Pix (10% OFF):* R$ ${totalPix.toFixed(2)}\n\n`;
+    texto += `💰 *Total no PIX:* R$ ${totalPix.toFixed(2)}\n`;
+    texto += `💳 *Pagamento em cartão:* consultar taxa\n\n`;
     texto += `Pode confirmar a disponibilidade do volume para mim?`;
 
     const url = `https://wa.me/${TELEFONE_WHATSAPP}?text=${encodeURIComponent(texto)}`;
@@ -581,7 +556,7 @@ export default function App() {
                 </button>
               </div>
 
-              <div className="divide-y divide-neutral-100 max-h-[42vh] overflow-y-auto my-2 pr-1">
+              <div className="divide-y divide-neutral-100 max-h-[50vh] overflow-y-auto my-2 pr-1">
                 {cart.length === 0 ? (
                   <p className="text-xs text-neutral-400 py-8 text-center">Nenhum item selecionado ainda.</p>
                 ) : (
@@ -614,66 +589,27 @@ export default function App() {
 
             {cart.length > 0 && (
               <div className="border-t border-neutral-200 pt-3 space-y-3">
-                <div className="grid grid-cols-2 gap-1.5 text-center text-[10px]">
-                  <div className="bg-neutral-50 border border-neutral-200 py-1.5 rounded-lg text-neutral-700">
-                    Até 5x sem juros
+                {/* Destaque do Total no PIX */}
+                <div className="flex justify-between items-center p-3 bg-emerald-50 text-emerald-950 rounded-xl border border-emerald-200 shadow-xs">
+                  <div>
+                    <span className="font-bold block text-xs">Total no PIX</span>
+                    <span className="text-[10px] text-emerald-700">Chave e dados no WhatsApp</span>
                   </div>
-                  <div className="bg-emerald-50 border border-emerald-200 py-1.5 rounded-lg font-bold text-emerald-800">
-                    10% OFF no Pix
-                  </div>
+                  <span className="text-lg font-bold font-serif text-emerald-900">
+                    R$ {totalPix.toFixed(2)}
+                  </span>
                 </div>
 
-                <div>
-                  <div className="flex gap-1.5">
-                    <input 
-                      type="text" 
-                      placeholder="CEP para entrega"
-                      maxLength={9}
-                      value={cep}
-                      onChange={(e) => setCep(e.target.value)}
-                      className="flex-1 border border-neutral-300 rounded-lg px-2.5 py-1.5 text-xs font-mono focus:outline-none focus:border-neutral-900"
-                    />
-                    <button 
-                      onClick={handleCalcularFrete}
-                      disabled={isCalculandoFrete}
-                      className="bg-neutral-900 text-white px-2.5 py-1.5 rounded-lg text-xs font-medium"
-                    >
-                      {isCalculandoFrete ? '...' : 'Calcular'}
-                    </button>
-                  </div>
-                  {freteCalculado && (
-                    <div className="mt-1.5 p-1.5 bg-neutral-50 border border-neutral-200 rounded flex justify-between items-center text-[11px]">
-                      <span className="text-neutral-600">{freteCalculado.transportadora} · {freteCalculado.prazo}</span>
-                      <span className="font-bold text-neutral-900">R$ {freteCalculado.valor.toFixed(2)}</span>
-                    </div>
-                  )}
+                {/* Aviso elegante sobre cartão */}
+                <div className="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-neutral-50 border border-neutral-200 rounded-lg text-neutral-600 text-[11px]">
+                  <CreditCard size={13} className="text-neutral-500" />
+                  <span>Pagamento em cartão: <strong>consultar taxa</strong></span>
                 </div>
 
-                <div className="space-y-1 pt-1 border-t border-dashed border-neutral-200 text-[11px]">
-                  <div className="flex justify-between text-neutral-500">
-                    <span>Subtotal</span>
-                    <span>R$ {subtotalItens.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between text-neutral-500">
-                    <span>Frete</span>
-                    <span>{freteCalculado ? `R$ ${freteCalculado.valor.toFixed(2)}` : 'A calcular / Acúmulo'}</span>
-                  </div>
-                  <div className="flex justify-between items-baseline pt-1 text-neutral-900 font-semibold">
-                    <span>Cartão</span>
-                    <span className="text-xs font-serif">R$ {totalCartao.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-baseline p-2 bg-emerald-50 text-emerald-950 rounded-lg border border-emerald-200">
-                    <div>
-                      <span className="font-bold block text-xs">Total no Pix</span>
-                      <span className="text-[9px] text-emerald-700">10% OFF</span>
-                    </div>
-                    <span className="text-sm font-bold font-serif text-emerald-900">R$ {totalPix.toFixed(2)}</span>
-                  </div>
-                </div>
-
+                {/* Botão de Finalização no WhatsApp */}
                 <button
                   onClick={handleFinalizarWhatsApp}
-                  className="w-full bg-[#1FAF38] hover:bg-[#1C9631] text-white py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform"
+                  className="w-full bg-[#1FAF38] hover:bg-[#1C9631] text-white py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform cursor-pointer"
                 >
                   <span>Pedir pelo WhatsApp</span>
                   <ChevronRight size={15} />
