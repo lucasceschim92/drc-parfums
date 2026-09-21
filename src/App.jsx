@@ -18,8 +18,8 @@ const PERFUMES = [
     linha: 'NICHO · COMPARTILHÁVEL',
     nome: 'Blue Sapphire',
     precoPorMl: 34.00,
-    mlDisponiveis: 53,
-    apcDisponivel: true,
+    mlDisponiveis: 18,
+    apcDisponivel: false,
     familia: 'Oriental Amadeirado',
     saida: 'Limão, Camomila, Sálvia, Açafrão e Tagetes',
     coracao: 'Rosa, Jasmim Indiano e Magnólia',
@@ -27,28 +27,14 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.18518.jpg'
   },
   {
-    id: 'creed-wild-vetiver',
-    marca: 'CREED',
-    linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
-    nome: 'Wild Vetiver',
-    precoPorMl: 38.50,
-    mlDisponiveis: 76,
-    apcDisponivel: true,
-    familia: 'Cítrico Aromático Amadeirado',
-    saida: 'Bergamota, Pimenta Rosa e Pimenta Timur',
-    coracao: 'Rosa, Groselha Preta (Cassis) e Gerânio',
-    fundo: 'Vetiver, Madeira de Âmbar e Cedro',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.125485.jpg'
-  },
-  {
     id: 'lv-ombre-nomade',
     marca: 'LOUIS VUITTON',
     linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
     nome: 'Ombre Nomade',
     precoPorMl: 35.00,
-    mlDisponiveis: 74,
-    apcDisponivel: true,
-    familia: 'Âmbar Amadeirado',
+    mlDisponiveis: 18,
+    apcDisponivel: false,
+    familia: 'Oriental Amadeirado',
     saida: 'Framboesa, Açafrão e Rosa Damascena',
     coracao: 'Agarwood (Oud) e Olíbano',
     fundo: 'Bétula, Benjoim, Madeira de Âmbar e Gerânio',
@@ -60,8 +46,8 @@ const PERFUMES = [
     linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
     nome: 'Hibiscus Mahajád',
     precoPorMl: 38.00,
-    mlDisponiveis: 85,
-    apcDisponivel: true,
+    mlDisponiveis: 13,
+    apcDisponivel: false,
     familia: 'Floral Oriental Frutado',
     saida: 'Hibisco, Cassis e Hortelã Picante',
     coracao: 'Rosa Damascena e Canela',
@@ -69,88 +55,116 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.69069.jpg'
   },
   {
-    id: 'sospiro-vibrato',
-    marca: 'SOSPIRO PERFUMES',
+    id: 'bdk-gris-charnel',
+    marca: 'BDK PARFUMS',
     linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Vibrato',
-    precoPorMl: 28.00,
-    mlDisponiveis: 39,
-    apcDisponivel: true,
+    nome: 'Gris Charnel',
+    precoPorMl: 26.00,
+    mlDisponiveis: 18,
+    apcDisponivel: false,
+    familia: 'Oriental Especiado',
+    saida: 'Cardamomo, Figo e Chá Preto',
+    coracao: 'Íris e Vetiver de Bourbon',
+    fundo: 'Sândalo e Fava Tonka',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.57038.jpg'
+  },
+  {
+    id: 'birkholz-portraits-of-portofino',
+    marca: 'BIRKHOLZ',
+    linha: 'CLASSIC COLLECTION · COMPARTILHÁVEL',
+    nome: 'Portraits of Portofino',
+    precoPorMl: 24.00,
+    mlDisponiveis: 24,
+    apcDisponivel: false,
     familia: 'Cítrico Floral Amadeirado',
-    saida: 'Bergamota, Toranja, Mandarina e Jasmim',
-    coracao: 'Gengibre, Notas Herbais e Magnólia',
-    fundo: 'Cedro, Almíscar, Patchouli, Raiz de Orris e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77196.jpg'
+    saida: 'Bergamota, Mandarina e Limão Siciliano',
+    coracao: 'Magnólia, Jasmim e Flores Brancas',
+    fundo: 'Âmbar, Almíscar, Gengibre, Patchouli e Madeira',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.73030.jpg'
   },
   {
-    id: 'xerjoff-naxos',
+    id: 'amouage-jubilation-xxv',
+    marca: 'AMOUAGE',
+    linha: 'MAIN COLLECTION · MASCULINO',
+    nome: 'Jubilation XXV Man',
+    precoPorMl: 32.00,
+    mlDisponiveis: 8,
+    apcDisponivel: false,
+    familia: 'Oriental Fougère',
+    saida: 'Amora, Olíbano, Ládano, Laranja e Coentro',
+    coracao: 'Mel, Madeira Guaiac, Canela e Louro',
+    fundo: 'Oud, Mirra, Cedro, Patchouli e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.2366.jpg'
+  },
+  {
+    id: 'xerjoff-40-knots',
     marca: 'XERJOFF',
-    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
-    nome: 'XJ 1861 Naxos',
-    precoPorMl: 16.00,
-    mlDisponiveis: 40,
-    apcDisponivel: true,
-    familia: 'Aromático Especiado',
-    saida: 'Lavanda, Bergamota e Limão Siciliano',
-    coracao: 'Mel, Canela, Cashmeran e Jasmim Sambac',
-    fundo: 'Folha de Tabaco, Fava Tonka e Baunilha',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
-  },
-  {
-    id: 'nishane-hacivat',
-    marca: 'NISHANE',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Hacivat',
-    precoPorMl: 24.00,
-    mlDisponiveis: 15,
-    apcDisponivel: false,
-    familia: 'Chipre Frutado',
-    saida: 'Abacaxi, Bergamota e Toranja',
-    coracao: 'Cedro, Patchouli e Jasmim',
-    fundo: 'Musgo de Carvalho e Notas Amadeiradas',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.44174.jpg'
-  },
-  {
-    id: 'nishane-hundred-silent-ways',
-    marca: 'NISHANE',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Hundred Silent Ways',
-    precoPorMl: 24.00,
-    mlDisponiveis: 13,
-    apcDisponivel: false,
-    familia: 'Floral Compartilhável',
-    saida: 'Tuberosa, Pêssego e Mandarina',
-    coracao: 'Gardênia, Raiz de Orris e Jasmim',
-    fundo: 'Baunilha, Sândalo e Vetiver',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.37602.jpg'
-  },
-  {
-    id: 'nishane-meltemia',
-    marca: 'NISHANE',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Meltemia',
-    precoPorMl: 25.00,
-    mlDisponiveis: 56,
+    linha: 'JOIN THE CLUB COLLECTION · COMPARTILHÁVEL',
+    nome: '40 Knots',
+    precoPorMl: 28.00,
+    mlDisponiveis: 38,
     apcDisponivel: false,
     familia: 'Aromático Aquático Amadeirado',
-    saida: 'Notas Marinhas, Bergamota e Especiarias Frescas',
-    coracao: 'Sal Marinho, Sálvia e Resinas',
-    fundo: 'Cedro, Âmbar e Almíscar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.103006.jpg'
+    saida: 'Notas Salgadas, Água do Mar e Cedro',
+    coracao: 'Notas Verdes e Especiarias Frescas',
+    fundo: 'Notas Amadeiradas, Cedro e Âmbar Suave',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.16445.jpg'
   },
   {
-    id: 'xerjoff-renaissance',
-    marca: 'XERJOFF',
-    linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
-    nome: 'XJ 1861 Renaissance',
-    precoPorMl: 16.00,
-    mlDisponiveis: 10,
+    id: 'creed-bois-du-portugal',
+    marca: 'CREED',
+    linha: 'HERITAGE COLLECTION · MASCULINO',
+    nome: 'Bois du Portugal',
+    precoPorMl: 34.00,
+    mlDisponiveis: 44,
     apcDisponivel: false,
-    familia: 'Cítrico Aromático',
-    saida: 'Limão Amalfi, Tangerina, Bergamota e Petitgrain',
-    coracao: 'Hortelã, Lírio-do-Vale e Rosa Búlgara',
-    fundo: 'Almíscar, Cedro, Âmbar e Patchouli',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.12128.jpg'
+    familia: 'Oriental Amadeirado',
+    saida: 'Bergamota da Calábria',
+    coracao: 'Lavanda Francesa',
+    fundo: 'Sândalo de Mysore, Cedro, Vetiver e Âmbar Cinzento',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.3805.jpg'
+  },
+  {
+    id: 'clive-christian-1872',
+    marca: 'CLIVE CHRISTIAN',
+    linha: 'ORIGINAL COLLECTION · MASCULINO',
+    nome: '1872 For Men',
+    precoPorMl: 42.00,
+    mlDisponiveis: 43,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático Especiado',
+    saida: 'Petitgrain, Lima, Bergamota, Alecrim e Toranja',
+    coracao: 'Sálvia Esclareia, Tagetes, Frésia e Jasmim',
+    fundo: 'Cedro da Virgínia, Patchouli, Olíbano e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.5252.jpg'
+  },
+  {
+    id: 'nishane-hacivat-x',
+    marca: 'NISHANE',
+    linha: 'X COLLECTION · COMPARTILHÁVEL',
+    nome: 'Hacivat X',
+    precoPorMl: 28.00,
+    mlDisponiveis: 19,
+    apcDisponivel: false,
+    familia: 'Chipre Frutado',
+    saida: 'Abacaxi, Bergamota e Pimenta Rosa',
+    coracao: 'Lima, Flor de Laranjeira Tunisiana e Jasmim',
+    fundo: 'Vetiver do Haiti, Patchouli e Cedro',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.80462.jpg'
+  },
+  {
+    id: 'creed-absolu-aventus',
+    marca: 'CREED',
+    linha: 'AVENTUS COLLECTION · MASCULINO',
+    nome: 'Absolu Aventus',
+    precoPorMl: 45.00,
+    mlDisponiveis: 15,
+    apcDisponivel: false,
+    familia: 'Chipre Frutado Especiado',
+    saida: 'Abacaxi, Groselha Preta, Toranja e Pimenta Rosa',
+    coracao: 'Canela, Gengibre e Cardamomo',
+    fundo: 'Vetiver, Patchouli, Ambroxan e Musgo de Carvalho',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.84112.jpg'
   }
 ];
 
@@ -169,7 +183,7 @@ export default function App() {
   const [freteCalculado, setFreteCalculado] = useState(null);
   const [isCalculandoFrete, setIsCalculandoFrete] = useState(false);
 
-  // Ordena automaticamente os perfumes colocando os com APC disponível primeiro
+  // Mantém a regra: APCs disponíveis sempre aparecem primeiro
   const perfumesOrdenados = useMemo(() => {
     return [...PERFUMES].sort((a, b) => {
       if (a.apcDisponivel === b.apcDisponivel) return 0;
@@ -308,12 +322,12 @@ export default function App() {
         </button>
       </header>
 
-      {/* Grid 2x2 no Celular (Mobile First) */}
+      {/* Grid 2x2 no Celular */}
       <main className="max-w-4xl mx-auto px-2.5 sm:px-4 py-4 sm:py-6">
         <div className="mb-3.5 flex items-center justify-between px-1">
           <div>
             <span className="text-[10px] tracking-widest uppercase text-neutral-500 font-semibold block">Frascos Disponíveis</span>
-            <h2 className="text-sm sm:text-base font-serif font-bold text-neutral-900">Curadoria Exclusiva de Decants & APC</h2>
+            <h2 className="text-sm sm:text-base font-serif font-bold text-neutral-900">Curadoria Exclusiva de Decants</h2>
           </div>
           <span className="text-[10px] font-mono text-neutral-500 bg-neutral-200/60 px-2 py-0.5 rounded-full">
             {perfumesOrdenados.length} perfumes
@@ -465,7 +479,7 @@ export default function App() {
               <div className="p-2 rounded-xl border border-neutral-200 bg-neutral-50 mb-3 flex items-center justify-between text-neutral-400 text-[11px]">
                 <div className="flex items-center gap-1.5">
                   <Ban size={13} className="text-neutral-400" />
-                  <span>APC (Frasco Original) Indisponível</span>
+                  <span>Apresentação Completa (APC) Indisponível</span>
                 </div>
                 <span className="text-[9px] font-mono uppercase bg-neutral-200 text-neutral-600 px-1.5 py-0.5 rounded">
                   Retido
