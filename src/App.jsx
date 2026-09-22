@@ -181,6 +181,7 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
+  // Mantém os perfumes com APC disponíveis primeiro no catálogo
   const perfumesOrdenados = useMemo(() => {
     return [...PERFUMES].sort((a, b) => {
       if (a.apcDisponivel === b.apcDisponivel) return 0;
@@ -297,7 +298,7 @@ export default function App() {
         </button>
       </header>
 
-      {/* Banner de Entrada no Grupo VIP */}
+      {/* Banner de Entrada no Grupo VIP - Imagens em .jfif */}
       <section className="max-w-4xl mx-auto px-2.5 sm:px-4 pt-3.5 sm:pt-6">
         <a 
           href={LINK_GRUPO_WHATSAPP}
@@ -307,13 +308,13 @@ export default function App() {
         >
           {/* Banner Mobile */}
           <img 
-            src="/banner-mobile.jpg" 
+            src="/banner-mobile.jfif" 
             alt="Grupo Exclusivo WhatsApp DRC Parfums" 
             className="w-full h-auto block sm:hidden object-cover"
           />
           {/* Banner Desktop / Tablet */}
           <img 
-            src="/banner-desktop.jpg" 
+            src="/banner-desktop.jfif" 
             alt="Grupo Exclusivo WhatsApp DRC Parfums" 
             className="w-full h-auto hidden sm:block object-cover"
           />
