@@ -181,7 +181,7 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Mantém os perfumes com APC disponíveis primeiro no catálogo
+  // Mantém perfumes com APC disponível exibidos primeiro
   const perfumesOrdenados = useMemo(() => {
     return [...PERFUMES].sort((a, b) => {
       if (a.apcDisponivel === b.apcDisponivel) return 0;
@@ -298,26 +298,31 @@ export default function App() {
         </button>
       </header>
 
-      {/* Banner de Entrada no Grupo VIP - Imagens em .jfif */}
-      <section className="max-w-4xl mx-auto px-2.5 sm:px-4 pt-3.5 sm:pt-6">
+      {/* Banner de Entrada no Grupo VIP — Otimizado para iPhone e Desktop */}
+      <section className="max-w-4xl mx-auto px-2.5 sm:px-4 pt-3 sm:pt-5">
         <a 
           href={LINK_GRUPO_WHATSAPP}
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-2xl overflow-hidden border border-[#E7E7E0] shadow-sm hover:shadow-md transition-all active:scale-[0.99] group bg-neutral-900"
+          className="block w-full rounded-2xl overflow-hidden border border-[#E5E4DE] shadow-sm hover:shadow-md transition-all active:scale-[0.99] group bg-[#111] focus:outline-none"
         >
-          {/* Banner Mobile */}
-          <img 
-            src="/banner-mobile.jfif" 
-            alt="Grupo Exclusivo WhatsApp DRC Parfums" 
-            className="w-full h-auto block sm:hidden object-cover"
-          />
-          {/* Banner Desktop / Tablet */}
-          <img 
-            src="/banner-desktop.jfif" 
-            alt="Grupo Exclusivo WhatsApp DRC Parfums" 
-            className="w-full h-auto hidden sm:block object-cover"
-          />
+          {/* Banner Mobile (iPhone/Android): travado em max-h-[340px] e aspect equilibrado */}
+          <div className="block sm:hidden w-full max-h-[340px] aspect-[4/5] overflow-hidden bg-[#181816]">
+            <img 
+              src="/banner-mobile.jfif" 
+              alt="Grupo Exclusivo WhatsApp DRC Parfums" 
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-300"
+            />
+          </div>
+
+          {/* Banner Desktop/Tablet: widescreen elegante com max-h controlado */}
+          <div className="hidden sm:block w-full max-h-[260px] md:max-h-[290px] aspect-[21/9] overflow-hidden bg-[#181816]">
+            <img 
+              src="/banner-desktop.jfif" 
+              alt="Grupo Exclusivo WhatsApp DRC Parfums" 
+              className="w-full h-full object-cover object-center group-hover:scale-[1.01] transition-transform duration-300"
+            />
+          </div>
         </a>
       </section>
 
