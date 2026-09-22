@@ -172,6 +172,7 @@ const PERFUMES = [
 const TAXA_FRASCO_DECANT = 9.00;
 const TAXA_FRASCO_APC = 40.00;
 const TELEFONE_WHATSAPP = "5528999005475";
+const LINK_GRUPO_WHATSAPP = "https://chat.whatsapp.com/FgtK9hr0KW2COsJdWtnDR9?s=cl&p=i&mlu=4&ilr=4";
 
 export default function App() {
   const [selectedPerfume, setSelectedPerfume] = useState(null);
@@ -180,7 +181,6 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Mantém a regra: APCs disponíveis sempre aparecem primeiro
   const perfumesOrdenados = useMemo(() => {
     return [...PERFUMES].sort((a, b) => {
       if (a.apcDisponivel === b.apcDisponivel) return 0;
@@ -296,6 +296,29 @@ export default function App() {
           )}
         </button>
       </header>
+
+      {/* Banner de Entrada no Grupo VIP */}
+      <section className="max-w-4xl mx-auto px-2.5 sm:px-4 pt-3.5 sm:pt-6">
+        <a 
+          href={LINK_GRUPO_WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block rounded-2xl overflow-hidden border border-[#E7E7E0] shadow-sm hover:shadow-md transition-all active:scale-[0.99] group bg-neutral-900"
+        >
+          {/* Banner Mobile */}
+          <img 
+            src="/banner-mobile.jpg" 
+            alt="Grupo Exclusivo WhatsApp DRC Parfums" 
+            className="w-full h-auto block sm:hidden object-cover"
+          />
+          {/* Banner Desktop / Tablet */}
+          <img 
+            src="/banner-desktop.jpg" 
+            alt="Grupo Exclusivo WhatsApp DRC Parfums" 
+            className="w-full h-auto hidden sm:block object-cover"
+          />
+        </a>
+      </section>
 
       {/* Grid 2x2 no Celular */}
       <main className="max-w-4xl mx-auto px-2.5 sm:px-4 py-4 sm:py-6">
@@ -589,7 +612,7 @@ export default function App() {
 
             {cart.length > 0 && (
               <div className="border-t border-neutral-200 pt-3 space-y-3">
-                {/* Destaque do Total no PIX */}
+                {/* Total no PIX */}
                 <div className="flex justify-between items-center p-3 bg-emerald-50 text-emerald-950 rounded-xl border border-emerald-200 shadow-xs">
                   <div>
                     <span className="font-bold block text-xs">Total no PIX</span>
@@ -600,13 +623,13 @@ export default function App() {
                   </span>
                 </div>
 
-                {/* Aviso elegante sobre cartão */}
+                {/* Aviso sobre cartão */}
                 <div className="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-neutral-50 border border-neutral-200 rounded-lg text-neutral-600 text-[11px]">
                   <CreditCard size={13} className="text-neutral-500" />
                   <span>Pagamento em cartão: <strong>consultar taxa</strong></span>
                 </div>
 
-                {/* Botão de Finalização no WhatsApp */}
+                {/* Finalizar WhatsApp */}
                 <button
                   onClick={handleFinalizarWhatsApp}
                   className="w-full bg-[#1FAF38] hover:bg-[#1C9631] text-white py-3 px-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-transform cursor-pointer"
