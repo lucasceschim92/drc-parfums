@@ -207,7 +207,7 @@ const PERFUMES = [
     saida: 'Aldeídos Radiantes',
     coracao: 'Manteiga de Íris e Pistache Nobre',
     fundo: 'Açafrão Metálico e Madeira de Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.56942.jpg'
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.110042.jpg'
   },
   {
     id: 'lv-city-of-stars',
@@ -357,11 +357,11 @@ const PERFUMES = [
     precoPorMl: 69.00,
     mlDisponiveis: 35,
     apcDisponivel: false,
-    familia: 'Aromático Aquático Amadeirado',
-    saida: 'Notas Marinhas, Bergamota e Especiarias Frescas',
-    coracao: 'Sal Marinho, Sálvia e Resinas',
-    fundo: 'Cedro, Âmbar e Almíscar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.103006.jpg'
+    familia: 'Cítrico Aromático',
+    saida: 'Laranja Amarga, Gengibre, Bergamota, Limão e Alecrim',
+    coracao: 'Flor de Laranjeira, Bálsamo do Peru, Petalia e Petitgrain',
+    fundo: 'Akigalawood, Ambreína e Sândalo',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.137049.jpg'
   },
   {
     id: 'nishane-tero',
@@ -400,10 +400,10 @@ const PERFUMES = [
     mlDisponiveis: 9,
     apcDisponivel: false,
     familia: 'Cítrico Frutado Amadeirado',
-    saida: 'Maçã Verde, Bergamota, Mandarina e Madeira de Cashmere',
-    coracao: 'Petitgrain, Cedro, Violeta e Pomarose',
-    fundo: 'Musgo de Carvalho, Almíscar e Acorde Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.62201.jpg'
+    saida: 'Maçã Verde, Bergamota da Calábria e Mandarina',
+    coracao: 'Petitgrain, Cedro, Madeira de Cashmere e Violeta',
+    fundo: 'Musgo de Carvalho, Almíscar e Madeira de Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.62101.jpg'
   },
   {
     id: 'pdm-layton-exclusif',
@@ -455,11 +455,11 @@ const PERFUMES = [
     precoPorMl: 19.50,
     mlDisponiveis: 10,
     apcDisponivel: false,
-    familia: 'Oriental Especiado Mel',
-    saida: 'Gerânio, Noz-moscada e Rosa Vermelha',
-    coracao: 'Mel Nobre, Sálvia Esclareia, Mimosa e Jasmim',
-    fundo: 'Folha de Tabaco, Baunilha, Âmbar e Almíscar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.67231.jpg'
+    familia: 'Oriental Floral Compartilhável',
+    saida: 'Nóz-moscada, Gerânio e Rosa',
+    coracao: 'Mel Nobre, Mimosa, Sálvia e Jasmim',
+    fundo: 'Folha de Tabaco, Baunilha, Âmbar e Patchouli',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69426.jpg'
   },
   {
     id: 'sospiro-basso',
@@ -501,7 +501,7 @@ const PERFUMES = [
     saida: 'Bergamota, Toranja, Mandarina e Jasmim',
     coracao: 'Gengibre, Notas Herbais e Magnólia',
     fundo: 'Cedro, Almíscar, Patchouli e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77196.jpg'
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.75930.jpg'
   },
   {
     id: 'xerjoff-40-knots',
