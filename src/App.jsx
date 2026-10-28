@@ -14,46 +14,60 @@ import {
 
 const PERFUMES = [
   {
-    id: 'amouage-jubilation-xxv',
-    marca: 'AMOUAGE',
-    linha: 'MAIN COLLECTION · MASCULINO',
-    nome: 'Jubilation XXV Man',
-    precoPorMl: 33.00,
-    mlDisponiveis: 17,
+    id: 'regalien-antidote',
+    marca: 'RÉGALIEN',
+    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Antidote',
+    precoPorMl: 17.50,
+    mlDisponiveis: 27,
     apcDisponivel: false,
-    familia: 'Oriental Fougère',
-    saida: 'Amora, Olíbano, Ládano, Laranja e Coentro',
-    coracao: 'Mel, Madeira Guaiac, Canela, Cravo e Louro',
-    fundo: 'Agarwood (Oud), Mirra, Cedro, Patchouli e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.2366.jpg'
+    familia: 'Oriental Floral Compartilhável',
+    saida: 'Noz-moscada, Gerânio e Rosa',
+    coracao: 'Mel Nobre, Mimosa, Sálvia e Jasmim',
+    fundo: 'Folha de Tabaco, Baunilha, Âmbar e Patchouli',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69426.jpg'
   },
   {
-    id: 'amouage-outlands',
-    marca: 'AMOUAGE',
-    linha: 'ESSENCE DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Outlands',
-    precoPorMl: 32.73,
-    mlDisponiveis: 17,
+    id: 'gritti-pomelo-sorrento',
+    marca: 'GRITTI',
+    linha: 'I TURCHESI · COMPARTILHÁVEL',
+    nome: 'Pomelo Sorrento',
+    precoPorMl: 21.50,
+    mlDisponiveis: 27,
     apcDisponivel: false,
-    familia: 'Oriental Amadeirado',
-    saida: 'Elemi, Cardamomo, Olíbano, Pimenta de Szechuan e Limão',
-    coracao: 'Patchouli, Açafrão, Gerânio, Anis e Rosa',
-    fundo: 'Baunilha, Âmbar, Benjoim, Oud, Maltol e Ládano',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.97924.jpg'
+    familia: 'Cítrico Aromático',
+    saida: 'Pomelo e Toranja',
+    coracao: 'Chá Verde, Flores Brancas e Rosa',
+    fundo: 'Vetiver, Âmbar e Íris',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.44917.jpg'
   },
   {
-    id: 'bdk-gris-charnel',
-    marca: 'BDK PARFUMS',
-    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Gris Charnel',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    id: 'lv-symphony',
+    marca: 'LOUIS VUITTON',
+    linha: 'LES EXTRAITS · COMPARTILHÁVEL',
+    nome: 'Symphony',
+    precoPorMl: 41.00,
+    mlDisponiveis: 24,
     apcDisponivel: false,
-    familia: 'Oriental Especiado',
-    saida: 'Cardamomo, Figo e Chá Preto',
-    coracao: 'Íris e Vetiver de Bourbon',
-    fundo: 'Sândalo e Fava Tonka',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.57038.jpg'
+    familia: 'Cítrico Compartilhável',
+    saida: 'Toranja Efervescente e Raspas Cítricas',
+    coracao: 'Gengibre Picante',
+    fundo: 'Bergamota e Almíscar Cristalino',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.68652.jpg'
+  },
+  {
+    id: 'lv-meteore',
+    marca: 'LOUIS VUITTON',
+    linha: 'LES PARFUMS · MASCULINO',
+    nome: 'Météore',
+    precoPorMl: 29.50,
+    mlDisponiveis: 8,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático Especiado',
+    saida: 'Mandarina, Laranja da Calábria e Bergamota',
+    coracao: 'Pimenta Rosa, Noz-moscada e Cardamomo',
+    fundo: 'Vetiver de Java',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.62770.jpg'
   },
   {
     id: 'bdk-gris-charnel-extrait',
@@ -61,7 +75,7 @@ const PERFUMES = [
     linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
     nome: 'Gris Charnel Extrait',
     precoPorMl: 22.00,
-    mlDisponiveis: 11,
+    mlDisponiveis: 15,
     apcDisponivel: false,
     familia: 'Amadeirado Especiado',
     saida: 'Cardamomo, Figo e Chá Preto',
@@ -70,60 +84,18 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.73645.jpg'
   },
   {
-    id: 'birkholz-portraits-of-portofino',
-    marca: 'BIRKHOLZ',
-    linha: 'CLASSIC COLLECTION · COMPARTILHÁVEL',
-    nome: 'Portraits of Portofino',
-    precoPorMl: 19.30,
-    mlDisponiveis: 10,
-    apcDisponivel: false,
-    familia: 'Cítrico Floral Amadeirado',
-    saida: 'Bergamota, Mandarina e Limão Siciliano',
-    coracao: 'Magnólia, Jasmim e Flores Brancas',
-    fundo: 'Âmbar, Almíscar, Gengibre, Patchouli e Madeira',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.74869.jpg'
-  },
-  {
-    id: 'boadicea-blue-sapphire',
-    marca: 'BOADICEA THE VICTORIOUS',
-    linha: 'NICHO · COMPARTILHÁVEL',
-    nome: 'Blue Sapphire',
-    precoPorMl: 34.00,
-    mlDisponiveis: 17,
+    id: 'min-new-york-voodoo',
+    marca: 'MIN NEW YORK',
+    linha: 'SCENT STORIES VOLUME 1 · COMPARTILHÁVEL',
+    nome: 'Voodoo',
+    precoPorMl: 24.00,
+    mlDisponiveis: 7,
     apcDisponivel: false,
     familia: 'Oriental Amadeirado',
-    saida: 'Limão, Camomila, Sálvia, Açafrão e Tagetes',
-    coracao: 'Rosa, Jasmim Indiano e Magnólia',
-    fundo: 'Agarwood (Oud), Patchouli e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.18518.jpg'
-  },
-  {
-    id: 'byredo-bal-dafrique',
-    marca: 'BYREDO',
-    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
-    nome: "Bal d'Afrique",
-    precoPorMl: 26.00,
-    mlDisponiveis: 13,
-    apcDisponivel: false,
-    familia: 'Âmbar Amadeirado',
-    saida: 'Limão de Amalfi, Tagetes, Groselha Preta e Bergamota',
-    coracao: 'Violeta, Cyclamen e Jasmim',
-    fundo: 'Vetiver, Almíscar, Âmbar e Cedro da Virgínia',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.6458.jpg'
-  },
-  {
-    id: 'byredo-bal-dafrique-absolu',
-    marca: 'BYREDO',
-    linha: 'EXTRAIT / ABSOLU · COMPARTILHÁVEL',
-    nome: "Bal d'Afrique Absolu",
-    precoPorMl: 36.00,
-    mlDisponiveis: 18,
-    apcDisponivel: false,
-    familia: 'Floral Amadeirado Almiscarado',
-    saida: 'Cassis, Bergamota e Limão',
-    coracao: 'Pralinê, Almíscar e Violeta',
-    fundo: 'Âmbar Negro, Cedro e Vetiver',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.108421.jpg'
+    saida: 'Cardamomo, Gálbano, Lima e Pimenta Rosa',
+    coracao: 'Olíbano, Gerânio e Rosa Turca',
+    fundo: 'Agarwood (Oud), Couro, Patchouli e Sândalo',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.26871.jpg'
   },
   {
     id: 'creed-absolu-aventus',
@@ -131,7 +103,7 @@ const PERFUMES = [
     linha: 'AVENTUS COLLECTION · MASCULINO',
     nome: 'Absolu Aventus',
     precoPorMl: 33.00,
-    mlDisponiveis: 17,
+    mlDisponiveis: 7,
     apcDisponivel: false,
     familia: 'Chipre Frutado Especiado',
     saida: 'Abacaxi, Groselha Preta, Toranja e Pimenta Rosa',
@@ -140,278 +112,96 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.84112.jpg'
   },
   {
-    id: 'creed-aventus',
+    id: 'creed-green-irish-tweed',
     marca: 'CREED',
     linha: 'HERITAGE COLLECTION · MASCULINO',
-    nome: 'Aventus',
+    nome: 'Green Irish Tweed',
     precoPorMl: 26.00,
-    mlDisponiveis: 13,
+    mlDisponiveis: 4,
     apcDisponivel: false,
-    familia: 'Chipre Frutado',
-    saida: 'Abacaxi, Bergamota, Maçã e Groselha Preta',
-    coracao: 'Vidoeiro, Patchouli, Rosa de Marrocos e Jasmim',
-    fundo: 'Almíscar, Musgo de Carvalho, Âmbar Cinzento e Baunilha',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.9828.jpg'
+    familia: 'Floral Amadeirado Almiscarado',
+    saida: 'Verbena e Íris',
+    coracao: 'Folhas de Violeta',
+    fundo: 'Âmbar Cinzento e Sândalo de Mysore',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.474.jpg'
   },
   {
-    id: 'creed-bois-du-portugal',
+    id: 'creed-aventus-cologne',
     marca: 'CREED',
-    linha: 'HERITAGE COLLECTION · MASCULINO',
-    nome: 'Bois du Portugal',
-    precoPorMl: 24.00,
-    mlDisponiveis: 12,
-    apcDisponivel: false,
-    familia: 'Oriental Amadeirado',
-    saida: 'Bergamota da Calábria',
-    coracao: 'Lavanda Francesa',
-    fundo: 'Sândalo de Mysore, Cedro, Vetiver e Âmbar Cinzento',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.3805.jpg'
-  },
-  {
-    id: 'creed-wild-vetiver',
-    marca: 'CREED',
-    linha: 'ALTA PERFUMARIA · COMPARTILHÁVEL',
-    nome: 'Wild Vetiver',
-    precoPorMl: 37.50,
-    mlDisponiveis: 19,
-    apcDisponivel: false,
-    familia: 'Cítrico Aromático Amadeirado',
-    saida: 'Bergamota, Pimenta Rosa e Pimenta Timur',
-    coracao: 'Rosa, Groselha Preta (Cassis) e Gerânio',
-    fundo: 'Vetiver, Madeira de Âmbar e Cedro',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.125485.jpg'
-  },
-  {
-    id: 'game-of-spades-emerald',
-    marca: 'JO MILANO PARIS',
-    linha: 'GAME OF SPADES · COMPARTILHÁVEL',
-    nome: 'Game of Spades Emerald',
-    precoPorMl: 12.00,
-    mlDisponiveis: 6,
-    apcDisponivel: false,
-    familia: 'Cítrico Frutado Aromático',
-    saida: 'Toranja Efervescente, Bergamota e Gengibre',
-    coracao: 'Flores Brancas e Notas Frutadas',
-    fundo: 'Almíscar Limpo, Cedro e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.100445.jpg'
-  },
-  {
-    id: 'hind-al-oud-yae',
-    marca: 'HIND AL OUD',
-    linha: 'ROYAL LUXURY · COMPARTILHÁVEL',
-    nome: 'Yae',
-    precoPorMl: 49.00,
-    mlDisponiveis: 25,
-    apcDisponivel: false,
-    familia: 'Oriental Ambarado',
-    saida: 'Aldeídos Radiantes',
-    coracao: 'Manteiga de Íris e Pistache Nobre',
-    fundo: 'Açafrão Metálico e Madeira de Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.110042.jpg'
-  },
-  {
-    id: 'lv-city-of-stars',
-    marca: 'LOUIS VUITTON',
-    linha: 'LES COLOGNES · COMPARTILHÁVEL',
-    nome: 'City of Stars',
-    precoPorMl: 29.50,
-    mlDisponiveis: 15,
-    apcDisponivel: false,
-    familia: 'Cítrico Aromático',
-    saida: 'Lima, Laranja Sanguínea, Mandarina e Limão',
-    coracao: 'Flor de Tiaré',
-    fundo: 'Notas Atalcadas, Almíscar e Sândalo',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.73344.jpg'
-  },
-  {
-    id: 'lv-imagination',
-    marca: 'LOUIS VUITTON',
-    linha: 'ALTA PERFUMARIA · MASCULINO',
-    nome: 'Imagination',
-    precoPorMl: 29.00,
-    mlDisponiveis: 15,
-    apcDisponivel: false,
-    familia: 'Cítrico Aromático',
-    saida: 'Cidra, Bergamota da Calábria e Laranja Siciliana',
-    coracao: 'Néroli Tunisiano, Gengibre e Canela',
-    fundo: 'Chá Preto Chinês, Ambroxan e Madeira Guaiac',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.67370.jpg'
-  },
-  {
-    id: 'lv-ombre-nomade',
-    marca: 'LOUIS VUITTON',
-    linha: 'LES PARFUMS · COMPARTILHÁVEL',
-    nome: 'Ombre Nomade',
-    precoPorMl: 35.00,
-    mlDisponiveis: 18,
-    apcDisponivel: false,
-    familia: 'Oriental Amadeirado',
-    saida: 'Framboesa, Açafrão e Rosa Damascena',
-    coracao: 'Agarwood (Oud) e Olíbano',
-    fundo: 'Bétula, Benjoim, Madeira de Âmbar e Gerânio',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.49755.jpg'
-  },
-  {
-    id: 'lv-pacific-chill',
-    marca: 'LOUIS VUITTON',
-    linha: 'LES COLOGNES · COMPARTILHÁVEL',
-    nome: 'Pacific Chill',
-    precoPorMl: 29.00,
-    mlDisponiveis: 15,
+    linha: 'AVENTUS COLLECTION · MASCULINO',
+    nome: 'Aventus Cologne',
+    precoPorMl: 26.00,
+    mlDisponiveis: 20,
     apcDisponivel: false,
     familia: 'Aromático Frutado',
-    saida: 'Cidra, Laranja, Limão, Hortelã e Groselha Preta',
-    coracao: 'Damasco, Manjericão, Sementes de Cenoura e Rosa',
-    fundo: 'Figo, Tâmaras e Ambreta',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.81423.jpg'
+    saida: 'Mandarina, Gengibre e Pimenta Rosa',
+    coracao: 'Vetiver, Patchouli e Abacaxi',
+    fundo: 'Vidoeiro, Almíscar, Fava Tonka e Styrax',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.51693.jpg'
   },
   {
-    id: 'crivelli-hibiscus-mahajad',
-    marca: 'MAISON CRIVELLI',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Hibiscus Mahajád',
-    precoPorMl: 38.00,
-    mlDisponiveis: 19,
-    apcDisponivel: false,
-    familia: 'Floral Oriental Frutado',
-    saida: 'Hibisco, Cassis e Hortelã Picante',
-    coracao: 'Rosa Damascena e Canela',
-    fundo: 'Baunilha, Couro, Ambreta e Cedro',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69069.jpg'
-  },
-  {
-    id: 'matiere-premiere-vanilla-powder',
-    marca: 'MATIÈRE PREMIÈRE',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Vanilla Powder Extrait',
+    id: 'boadicea-knight-of-love',
+    marca: 'BOADICEA THE VICTORIOUS',
+    linha: 'EXCLUSIVE COLLECTION · COMPARTILHÁVEL',
+    nome: 'Knight of Love',
     precoPorMl: 27.00,
-    mlDisponiveis: 14,
+    mlDisponiveis: 25,
     apcDisponivel: false,
-    familia: 'Oriental Baunilha',
-    saida: 'Coco em Pó e Heliotrópio',
-    coracao: 'Baunilha de Madagascar e Fava Tonka',
-    fundo: 'Palo Santo, Almíscar Branco e Lactona',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.84933.jpg'
+    familia: 'Amadeirado Especiado',
+    saida: 'Cardamomo, Pimenta Rosa, Junípero e Bergamota',
+    coracao: 'Violeta, Rosa Damascena e Madeira de Cashmere',
+    fundo: 'Agarwood (Oud), Âmbar, Couro, Benjoim e Tabaco',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.64390.jpg'
   },
   {
-    id: 'memo-paris-ithaque',
-    marca: 'MEMO PARIS',
-    linha: 'GRAINES VAGABONDES · COMPARTILHÁVEL',
-    nome: 'Ithaque',
-    precoPorMl: 23.00,
-    mlDisponiveis: 12,
+    id: 'boadicea-blue-sapphire',
+    marca: 'BOADICEA THE VICTORIOUS',
+    linha: 'NICHO · COMPARTILHÁVEL',
+    nome: 'Blue Sapphire',
+    precoPorMl: 34.00,
+    mlDisponiveis: 5,
     apcDisponivel: false,
-    familia: 'Chipre Cítrico Frutado',
-    saida: 'Bergamota, Laranja Amarga e Mandarina',
-    coracao: 'Cassis, Bagas de Zimbro e Framboesa',
-    fundo: 'Cedro, Patchouli e Almíscar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.79533.jpg'
+    familia: 'Oriental Amadeirado',
+    saida: 'Limão, Camomila, Sálvia, Açafrão e Tagetes',
+    coracao: 'Rosa, Jasmim Indiano e Magnólia',
+    fundo: 'Agarwood (Oud), Patchouli e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.18518.jpg'
   },
   {
-    id: 'nishane-ani',
-    marca: 'NISHANE',
-    linha: 'NO BOUNDARIES · COMPARTILHÁVEL',
-    nome: 'Ani',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    id: 'byredo-rose-of-no-mans-land-absolu',
+    marca: 'BYREDO',
+    linha: 'EXTRAIT / ABSOLU · COMPARTILHÁVEL',
+    nome: "Rose of No Man's Land Absolu",
+    precoPorMl: 36.00,
+    mlDisponiveis: 10,
     apcDisponivel: false,
-    familia: 'Oriental Especiado',
-    saida: 'Gengibre, Bergamota, Pimenta Rosa e Notas Verdes',
-    coracao: 'Cardamomo, Groselha Preta e Rosa Turca',
-    fundo: 'Baunilha, Benjoim, Sândalo, Cedro e Patchouli',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.54785.jpg'
+    familia: 'Oriental Floral',
+    saida: 'Pimenta Rosa, Framboesa e Groselha Preta',
+    coracao: 'Pétalas de Rosa Turca e Flor de Framboesa',
+    fundo: 'Papiro, Âmbar Branco e Patchouli',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.108422.jpg'
   },
   {
-    id: 'nishane-hacivat',
-    marca: 'NISHANE',
-    linha: 'SHADOW PLAY · COMPARTILHÁVEL',
-    nome: 'Hacivat',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    id: 'byredo-bal-dafrique-absolu',
+    marca: 'BYREDO',
+    linha: 'EXTRAIT / ABSOLU · COMPARTILHÁVEL',
+    nome: "Bal d'Afrique Absolu",
+    precoPorMl: 36.00,
+    mlDisponiveis: 21,
     apcDisponivel: false,
-    familia: 'Chipre Frutado',
-    saida: 'Abacaxi, Toranja e Bergamota',
-    coracao: 'Cedro, Patchouli e Jasmim',
-    fundo: 'Musgo de Carvalho e Notas Amadeiradas',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.44174.jpg'
-  },
-  {
-    id: 'nishane-hundred-silent-ways',
-    marca: 'NISHANE',
-    linha: 'RUMI COLLECTION · COMPARTILHÁVEL',
-    nome: 'Hundred Silent Ways',
-    precoPorMl: 25.00,
-    mlDisponiveis: 13,
-    apcDisponivel: false,
-    familia: 'Floral Gourmand',
-    saida: 'Tuberosa, Pêssego e Mandarina',
-    coracao: 'Gardênia, Raiz de Orris e Jasmim',
-    fundo: 'Baunilha, Sândalo e Vetiver',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.37602.jpg'
-  },
-  {
-    id: 'nishane-meltemia',
-    marca: 'NISHANE',
-    linha: 'TIME CAPSULE · COMPARTILHÁVEL',
-    nome: 'Meltemia',
-    precoPorMl: 69.00,
-    mlDisponiveis: 35,
-    apcDisponivel: false,
-    familia: 'Cítrico Aromático',
-    saida: 'Laranja Amarga, Gengibre, Bergamota, Limão e Alecrim',
-    coracao: 'Flor de Laranjeira, Bálsamo do Peru, Petalia e Petitgrain',
-    fundo: 'Akigalawood, Ambreína e Sândalo',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.137049.jpg'
-  },
-  {
-    id: 'nishane-tero',
-    marca: 'NISHANE',
-    linha: 'TIME CAPSULE · COMPARTILHÁVEL',
-    nome: 'Tero',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
-    apcDisponivel: false,
-    familia: 'Oriental Especiado Gourmand',
-    saida: 'Caramelo Salgado, Pimenta de Szechuan e Sal',
-    coracao: 'Patchouli e Canela Quente',
-    fundo: 'Âmbar, Carvalho e Vetiver',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.74669.jpg'
-  },
-  {
-    id: 'pdm-althair',
-    marca: 'PARFUMS DE MARLY',
-    linha: 'MASCULINO',
-    nome: 'Althaïr',
-    precoPorMl: 16.00,
-    mlDisponiveis: 8,
-    apcDisponivel: false,
-    familia: 'Oriental Baunilha',
-    saida: 'Canela, Flor de Laranjeira, Cardamomo e Bergamota',
-    coracao: 'Baunilha Bourbon e Élemi',
-    fundo: 'Pralinê, Almíscar, Ambroxan e Madeira Guaiac',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.84109.jpg'
-  },
-  {
-    id: 'pdm-greenley',
-    marca: 'PARFUMS DE MARLY',
-    linha: 'COMPARTILHÁVEL',
-    nome: 'Greenley',
-    precoPorMl: 17.50,
-    mlDisponiveis: 9,
-    apcDisponivel: false,
-    familia: 'Cítrico Frutado Amadeirado',
-    saida: 'Maçã Verde, Bergamota da Calábria e Mandarina',
-    coracao: 'Petitgrain, Cedro, Madeira de Cashmere e Violeta',
-    fundo: 'Musgo de Carvalho, Almíscar e Madeira de Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.62101.jpg'
+    familia: 'Floral Amadeirado Almiscarado',
+    saida: 'Cassis, Bergamota e Limão',
+    coracao: 'Pralinê, Almíscar e Violeta',
+    fundo: 'Âmbar Negro, Cedro e Vetiver',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.108421.jpg'
   },
   {
     id: 'pdm-layton-exclusif',
     marca: 'PARFUMS DE MARLY',
     linha: 'COMPARTILHÁVEL',
     nome: 'Layton Exclusif',
-    precoPorMl: 20.40,
-    mlDisponiveis: 11,
+    precoPorMl: 20.50,
+    mlDisponiveis: 20,
     apcDisponivel: false,
     familia: 'Oriental Amadeirado',
     saida: 'Amêndoa, Mandarina, Bergamota e Notas Aquáticas',
@@ -420,54 +210,40 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.46633.jpg'
   },
   {
-    id: 'pdm-percival',
-    marca: 'PARFUMS DE MARLY',
-    linha: 'COMPARTILHÁVEL',
-    nome: 'Percival',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    id: 'memo-paris-african-leather',
+    marca: 'MEMO PARIS',
+    linha: 'CUIRS NOMADES · COMPARTILHÁVEL',
+    nome: 'African Leather',
+    precoPorMl: 21.00,
+    mlDisponiveis: 20,
     apcDisponivel: false,
-    familia: 'Cítrico Aromático',
-    saida: 'Bergamota, Mandarina, Lavanda e Gerânio',
-    coracao: 'Hedione, Coentro, Violeta, Canela e Jasmim',
-    fundo: 'Ambroxan, Clearwood, Almíscar e Bálsamo de Abeto',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.51037.jpg'
+    familia: 'Couro Especiado Quente',
+    saida: 'Cardamomo, Bergamota e Açafrão',
+    coracao: 'Cominho, Gerânio e Patchouli',
+    fundo: 'Couro Nobre, Vetiver, Agarwood (Oud) e Almíscar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.32034.jpg'
   },
   {
-    id: 'pdm-sedley',
-    marca: 'PARFUMS DE MARLY',
-    linha: 'COMPARTILHÁVEL',
-    nome: 'Sedley',
-    precoPorMl: 19.50,
+    id: 'memo-paris-ithaque',
+    marca: 'MEMO PARIS',
+    linha: 'GRAINES VAGABONDES · COMPARTILHÁVEL',
+    nome: 'Ithaque',
+    precoPorMl: 24.00,
     mlDisponiveis: 10,
     apcDisponivel: false,
-    familia: 'Aromático Aquático Amadeirado',
-    saida: 'Limão, Hortelã, Bergamota, Toranja e Mandarina',
-    coracao: 'Lavanda, Alecrim, Olíbano e Gerânio',
-    fundo: 'Ambroxan, Sândalo, Cedro, Vetiver e Patchouli',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.56273.jpg'
-  },
-  {
-    id: 'regalien-antidote',
-    marca: 'RÉGALIEN',
-    linha: 'EXTRAIT DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Antidote',
-    precoPorMl: 19.50,
-    mlDisponiveis: 10,
-    apcDisponivel: false,
-    familia: 'Oriental Floral Compartilhável',
-    saida: 'Nóz-moscada, Gerânio e Rosa',
-    coracao: 'Mel Nobre, Mimosa, Sálvia e Jasmim',
-    fundo: 'Folha de Tabaco, Baunilha, Âmbar e Patchouli',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.69426.jpg'
+    familia: 'Chipre Cítrico Frutado',
+    saida: 'Bergamota, Laranja Amarga e Mandarina',
+    coracao: 'Cassis, Bagas de Zimbro e Framboesa',
+    fundo: 'Cedro, Patchouli e Almíscar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.79533.jpg'
   },
   {
     id: 'sospiro-basso',
     marca: 'SOSPIRO PERFUMES',
     linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
     nome: 'Basso',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    precoPorMl: 28.50,
+    mlDisponiveis: 12,
     apcDisponivel: false,
     familia: 'Amadeirado Aromático Verde',
     saida: 'Toranja Nobre e Raspas Cítricas',
@@ -476,12 +252,26 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.75927.jpg'
   },
   {
+    id: 'sospiro-dolce-melodia',
+    marca: 'SOSPIRO PERFUMES',
+    linha: 'CLASSICA COLLECTION · COMPARTILHÁVEL',
+    nome: 'Dolce Melodia',
+    precoPorMl: 24.00,
+    mlDisponiveis: 20,
+    apcDisponivel: false,
+    familia: 'Floral Frutado Gourmet',
+    saida: 'Mandarina, Laranja e Açafrão',
+    coracao: 'Pêra, Pêssego Branco, Rosa Damascena e Gardênia',
+    fundo: 'Baunilha de Madagascar, Almíscar e Sândalo',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.77195.jpg'
+  },
+  {
     id: 'sospiro-il-padrino',
     marca: 'SOSPIRO PERFUMES',
     linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
     nome: 'Il Padrino',
     precoPorMl: 16.00,
-    mlDisponiveis: 8,
+    mlDisponiveis: 20,
     apcDisponivel: false,
     familia: 'Oriental Amadeirado Alcoólico',
     saida: 'Rum Envelhecido, Amaretto, Groselha Preta e Bergamota',
@@ -490,40 +280,12 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.103313.jpg'
   },
   {
-    id: 'sospiro-vibrato',
-    marca: 'SOSPIRO PERFUMES',
-    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
-    nome: 'Vibrato',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
-    apcDisponivel: false,
-    familia: 'Cítrico Floral Amadeirado',
-    saida: 'Bergamota, Toranja, Mandarina e Jasmim',
-    coracao: 'Gengibre, Notas Herbais e Magnólia',
-    fundo: 'Cedro, Almíscar, Patchouli e Âmbar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.75930.jpg'
-  },
-  {
-    id: 'xerjoff-40-knots',
-    marca: 'XERJOFF',
-    linha: 'JOIN THE CLUB COLLECTION · COMPARTILHÁVEL',
-    nome: '40 Knots',
-    precoPorMl: 15.00,
-    mlDisponiveis: 8,
-    apcDisponivel: false,
-    familia: 'Aromático Aquático Amadeirado',
-    saida: 'Notas Salgadas, Água do Mar e Cedro',
-    coracao: 'Notas Verdes e Especiarias Frescas',
-    fundo: 'Notas Amadeiradas, Cedro e Âmbar Suave',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.16445.jpg'
-  },
-  {
     id: 'xerjoff-naxos',
     marca: 'XERJOFF',
     linha: 'XJ 1861 COLLECTION · COMPARTILHÁVEL',
     nome: 'XJ 1861 Naxos',
-    precoPorMl: 18.00,
-    mlDisponiveis: 9,
+    precoPorMl: 17.00,
+    mlDisponiveis: 38,
     apcDisponivel: false,
     familia: 'Aromático Especiado',
     saida: 'Lavanda, Bergamota e Limão Siciliano',
@@ -532,18 +294,88 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.30529.jpg'
   },
   {
-    id: 'xerjoff-torino-21',
+    id: 'xerjoff-40-knots',
     marca: 'XERJOFF',
-    linha: 'NITTO ATP FINALS · COMPARTILHÁVEL',
-    nome: 'Torino 21',
-    precoPorMl: 16.50,
-    mlDisponiveis: 9,
+    linha: 'JOIN THE CLUB COLLECTION · COMPARTILHÁVEL',
+    nome: '40 Knots',
+    precoPorMl: 15.00,
+    mlDisponiveis: 5,
     apcDisponivel: false,
-    familia: 'Aromático Verde Cítrico',
-    saida: 'Hortelã Fresca, Limão, Manjericão e Tomilho',
-    coracao: 'Groselha Preta, Lavanda, Alecrim e Jasmim',
-    fundo: 'Almíscar Limpo e Verbena',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.70424.jpg'
+    familia: 'Aromático Aquático Amadeirado',
+    saida: 'Notas Salgadas, Água do Mar e Cedro',
+    coracao: 'Notas Verdes e Especiarias Frescas',
+    fundo: 'Notas Amadeiradas, Cedro e Âmbar Suave',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.16445.jpg'
+  },
+  {
+    id: 'casamorati-mefisto',
+    marca: 'CASAMORATI (XERJOFF)',
+    linha: 'VINTAGE COLLECTION · MASCULINO',
+    nome: 'Mefisto',
+    precoPorMl: 14.00,
+    mlDisponiveis: 5,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático',
+    saida: 'Toranja, Bergamota da Calábria e Limão de Amalfi',
+    coracao: 'Lavanda, Íris e Rosa',
+    fundo: 'Almíscar Branco, Cedro da Virgínia, Sândalo e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.6720.jpg'
+  },
+  {
+    id: 'casamorati-mefisto-gentiluomo',
+    marca: 'CASAMORATI (XERJOFF)',
+    linha: 'VINTAGE COLLECTION · MASCULINO',
+    nome: 'Mefisto Gentiluomo',
+    precoPorMl: 14.00,
+    mlDisponiveis: 22,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático Elegante',
+    saida: 'Lavanda, Toranja, Bergamota e Limão',
+    coracao: 'Violeta, Íris e Rosa',
+    fundo: 'Cedro, Almíscar e Âmbar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.52844.jpg'
+  },
+  {
+    id: 'nishane-hacivat',
+    marca: 'NISHANE',
+    linha: 'SHADOW PLAY · COMPARTILHÁVEL',
+    nome: 'Hacivat',
+    precoPorMl: 18.00,
+    mlDisponiveis: 15,
+    apcDisponivel: false,
+    familia: 'Chipre Frutado',
+    saida: 'Abacaxi, Toranja e Bergamota',
+    coracao: 'Cedro, Patchouli e Jasmim',
+    fundo: 'Musgo de Carvalho e Notas Amadeiradas',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.44174.jpg'
+  },
+  {
+    id: 'nishane-tero',
+    marca: 'NISHANE',
+    linha: 'TIME CAPSULE · COMPARTILHÁVEL',
+    nome: 'Tero',
+    precoPorMl: 17.50,
+    mlDisponiveis: 30,
+    apcDisponivel: false,
+    familia: 'Oriental Especiado Gourmand',
+    saida: 'Caramelo Salgado, Pimenta de Szechuan e Sal',
+    coracao: 'Patchouli e Canela Quente',
+    fundo: 'Âmbar, Carvalho e Vetiver',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.74669.jpg'
+  },
+  {
+    id: 'nishane-ani',
+    marca: 'NISHANE',
+    linha: 'NO BOUNDARIES · COMPARTILHÁVEL',
+    nome: 'Ani',
+    precoPorMl: 18.00,
+    mlDisponiveis: 48,
+    apcDisponivel: false,
+    familia: 'Oriental Especiado',
+    saida: 'Gengibre, Bergamota, Pimenta Rosa e Notas Verdes',
+    coracao: 'Cardamomo, Groselha Preta e Rosa Turca',
+    fundo: 'Baunilha, Benjoim, Sândalo, Cedro e Patchouli',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.54785.jpg'
   }
 ];
 
@@ -664,7 +496,7 @@ export default function App() {
 
         <button 
           onClick={() => setIsCartOpen(true)}
-          className="relative flex items-center gap-1.5 bg-neutral-900 text-white px-3 py-1.5 rounded-full text-xs font-medium tracking-wide shadow hover:bg-black transition-transform active:scale-95"
+          className="relative flex items-center gap-1.5 bg-neutral-900 text-white px-3 py-1.5 rounded-full text-xs font-medium tracking-wide shadow hover:bg-black transition-transform active:scale-95 cursor-pointer"
         >
           <ShoppingBag size={14} />
           <span className="font-bold">{cart.length}</span>
@@ -804,7 +636,7 @@ export default function App() {
               </div>
               <button 
                 onClick={() => setSelectedPerfume(null)}
-                className="p-1 rounded-full text-neutral-400 hover:text-neutral-900 hover:bg-neutral-100"
+                className="p-1 rounded-full text-neutral-400 hover:text-neutral-900 hover:bg-neutral-100 cursor-pointer"
               >
                 <X size={18} />
               </button>
@@ -887,7 +719,7 @@ export default function App() {
                         volumeDesejado === vol 
                           ? 'bg-neutral-900 text-white border-neutral-900' 
                           : 'border-neutral-200 text-neutral-700 bg-white'
-                      } disabled:opacity-30`}
+                      } disabled:opacity-30 cursor-pointer`}
                     >
                       {vol} ml
                     </button>
@@ -898,7 +730,7 @@ export default function App() {
                   <button 
                     onClick={handleDecrement}
                     disabled={volumeDesejado <= 3}
-                    className="w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-200 text-neutral-700 hover:bg-neutral-100 disabled:opacity-30"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-200 text-neutral-700 hover:bg-neutral-100 disabled:opacity-30 cursor-pointer"
                   >
                     <Minus size={14} />
                   </button>
@@ -909,7 +741,7 @@ export default function App() {
                   <button 
                     onClick={handleIncrement}
                     disabled={volumeDesejado >= selectedPerfume.mlDisponiveis}
-                    className="w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-200 text-neutral-700 hover:bg-neutral-100 disabled:opacity-30"
+                    className="w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-200 text-neutral-700 hover:bg-neutral-100 disabled:opacity-30 cursor-pointer"
                   >
                     <Plus size={14} />
                   </button>
@@ -935,7 +767,7 @@ export default function App() {
               </div>
               <button
                 onClick={handleAddToCart}
-                className="flex-1 bg-neutral-900 text-white py-2.5 px-3 rounded-xl text-xs font-semibold uppercase tracking-wide hover:bg-black transition-colors flex items-center justify-center gap-1.5"
+                className="flex-1 bg-neutral-900 text-white py-2.5 px-3 rounded-xl text-xs font-semibold uppercase tracking-wide hover:bg-black transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>{querAPC ? 'Disputar APC' : 'Adicionar Decant'}</span>
                 <Plus size={14} />
@@ -957,7 +789,7 @@ export default function App() {
                 </div>
                 <button 
                   onClick={() => setIsCartOpen(false)}
-                  className="p-1 text-neutral-400 hover:text-neutral-900"
+                  className="p-1 text-neutral-400 hover:text-neutral-900 cursor-pointer"
                 >
                   <X size={18} />
                 </button>
@@ -983,7 +815,7 @@ export default function App() {
                         <span className="text-xs font-bold font-serif text-neutral-900 block">R$ {item.subtotal.toFixed(2)}</span>
                         <button 
                           onClick={() => handleRemoveFromCart(item.id)}
-                          className="text-neutral-400 hover:text-rose-600 mt-0.5"
+                          className="text-neutral-400 hover:text-rose-600 mt-0.5 cursor-pointer"
                         >
                           <Trash2 size={12} />
                         </button>
