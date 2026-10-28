@@ -221,7 +221,7 @@ const PERFUMES = [
     saida: 'Cardamomo, Bergamota e Açafrão',
     coracao: 'Cominho, Gerânio e Patchouli',
     fundo: 'Couro Nobre, Vetiver, Agarwood (Oud) e Almíscar',
-    imagem: 'https://fimgs.net/mdimg/perfume/375x500.32034.jpg'
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.31383.jpg'
   },
   {
     id: 'memo-paris-ithaque',
@@ -391,7 +391,6 @@ export default function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Mantém perfumes com APC disponível exibidos no topo do catálogo
   const perfumesOrdenados = useMemo(() => {
     return [...PERFUMES].sort((a, b) => {
       if (a.apcDisponivel === b.apcDisponivel) return 0;
@@ -508,7 +507,7 @@ export default function App() {
         </button>
       </header>
 
-      {/* Banner de Entrada no Grupo VIP — Otimizado para iPhone e Desktop */}
+      {/* Banner de Entrada no Grupo VIP */}
       <section className="max-w-4xl mx-auto px-2.5 sm:px-4 pt-3 sm:pt-5">
         <a 
           href={LINK_GRUPO_WHATSAPP}
@@ -516,7 +515,7 @@ export default function App() {
           rel="noopener noreferrer"
           className="block w-full rounded-2xl overflow-hidden border border-[#E5E4DE] shadow-sm hover:shadow-md transition-all active:scale-[0.99] group bg-[#111] focus:outline-none"
         >
-          {/* Banner Mobile (iPhone/Android) */}
+          {/* Banner Mobile */}
           <div className="block sm:hidden w-full max-h-[340px] aspect-[4/5] overflow-hidden bg-[#181816]">
             <img 
               src="/banner-mobile.jfif" 
@@ -525,7 +524,7 @@ export default function App() {
             />
           </div>
 
-          {/* Banner Desktop/Tablet */}
+          {/* Banner Desktop */}
           <div className="hidden sm:block w-full max-h-[260px] md:max-h-[290px] aspect-[21/9] overflow-hidden bg-[#181816]">
             <img 
               src="/banner-desktop.jfif" 
