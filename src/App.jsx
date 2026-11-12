@@ -196,6 +196,20 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.51016.jpg'
   },
   {
+    id: 'lv-imagination',
+    marca: 'LOUIS VUITTON',
+    linha: 'ALTA PERFUMARIA · MASCULINO',
+    nome: 'Imagination',
+    precoPorMl: 29.50,
+    mlDisponiveis: 20,
+    apcDisponivel: false,
+    familia: 'Cítrico Aromático',
+    saida: 'Cidra, Bergamota da Calábria e Laranja Siciliana',
+    coracao: 'Néroli Tunisiano, Gengibre da Nigéria e Canela',
+    fundo: 'Chá Preto Chinês, Ambroxan, Olíbano e Guaiac',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.67370.jpg'
+  },
+  {
     id: 'lv-meteore',
     marca: 'LOUIS VUITTON',
     linha: 'LES PARFUMS · MASCULINO',
@@ -392,6 +406,20 @@ const PERFUMES = [
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.103313.jpg'
   },
   {
+    id: 'sospiro-vibrato',
+    marca: 'SOSPIRO PERFUMES',
+    linha: 'EAU DE PARFUM · COMPARTILHÁVEL',
+    nome: 'Vibrato',
+    precoPorMl: 18.00,
+    mlDisponiveis: 20,
+    apcDisponivel: false,
+    familia: 'Cítrico Floral Amadeirado',
+    saida: 'Toranja, Bergamota, Jasmim e Magnólia',
+    coracao: 'Gengibre, Notas Herbais e Notas Atalcadas',
+    fundo: 'Almíscar, Cedro, Âmbar, Patchouli e Raiz de Orris',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.75930.jpg'
+  },
+  {
     id: 'xerjoff-40-knots',
     marca: 'XERJOFF',
     linha: 'JOIN THE CLUB COLLECTION · COMPARTILHÁVEL',
@@ -404,6 +432,20 @@ const PERFUMES = [
     coracao: 'Notas Verdes e Especiarias Frescas',
     fundo: 'Notas Amadeiradas, Cedro e Âmbar Suave',
     imagem: 'https://fimgs.net/mdimg/perfume/375x500.16445.jpg'
+  },
+  {
+    id: 'xerjoff-torino-21',
+    marca: 'XERJOFF',
+    linha: 'JOIN THE CLUB · NITTO ATP FINALS · COMPARTILHÁVEL',
+    nome: 'Torino21',
+    precoPorMl: 16.00,
+    mlDisponiveis: 20,
+    apcDisponivel: false,
+    familia: 'Aromático Verde Cítrico',
+    saida: 'Hortelã, Limão, Manjericão e Tomilho',
+    coracao: 'Groselha Preta, Alecrim, Lavanda e Jasmim',
+    fundo: 'Lúcia-lima (Verbena) e Almíscar',
+    imagem: 'https://fimgs.net/mdimg/perfume/375x500.70424.jpg'
   },
   {
     id: 'xerjoff-naxos',
